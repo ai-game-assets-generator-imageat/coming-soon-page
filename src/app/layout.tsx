@@ -9,7 +9,7 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata = {
-  title: "Home - IMAGEAT AI Coming Soon!",
+  title: "IMAGEAT AI Coming Soon! - Image Generation Tool",
   description: 'We are building a SaaS product to help game developers for their image generation needs.',
 }
 
