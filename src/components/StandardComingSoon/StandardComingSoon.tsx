@@ -1,7 +1,4 @@
-
-import { Inter } from "next/font/google";
 import data from "../../../data/data";
-const inter = Inter({ subsets: ["latin"] });
 import SubscribeForm from "../SubscribeForm/SubscribeForm";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
@@ -19,7 +16,6 @@ export default function StandardComingSoon() {
     socialIconsHeading,
     title,
   } = data;
-
 
   return (
     <>
