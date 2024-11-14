@@ -10,7 +10,7 @@ const spaceMono = Space_Mono({
 
 export const metadata = {
   title: "Home - IMAGEAT AI Coming Soon!",
-  description: 'This is a simple coming soon template built with NextJS and TailwindCSS. It is a lightweight and responsive template that can be used for various projects that require a "coming soon" page.',
+  description: 'We are building a SaaS product to help game developers for their image generation needs.',
 }
 
 export default function RootLayout({
