@@ -18,55 +18,30 @@ function SubscribeForm() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        
-        // Form validation
-        if (!email.trim()) {
-            setStatus('error');
-            setMessage('Email address is required.');
-            return;
-        }
-
-        if (!isEmailValid(email)) {
-            setStatus('error');
-            setMessage('Please enter a valid email address.');
-            return;
-        }
-
         setStatus('loading');
 
         try {
-            // Check for existing email
-            const q = query(
-                collection(db, 'subscribers'), 
-                where('email', '==', email.toLowerCase().trim())
-            );
-            
-            const querySnapshot = await getDocs(q);
-
-            if (!querySnapshot.empty) {
-                setStatus('error');
-                setMessage('This email is already subscribed.');
-                return;
-            }
-
-            // Add new subscriber with proper data structure
-            await addDoc(collection(db, 'subscribers'), {
+            // Debug için log
+            console.log('Submitting with data:', {
                 email: email.toLowerCase().trim(),
                 timestamp: serverTimestamp(),
-                subscribed: true,
-                source: 'landing_page',
-                metadata: {
-                    subscriptionDate: new Date().toISOString(),
-                    environment: process.env.NODE_ENV
-                }
+                subscribed: true
+            });
+
+            const subscribersRef = collection(db, 'subscribers');
+            await addDoc(subscribersRef, {
+                email: email.toLowerCase().trim(),
+                timestamp: serverTimestamp(),
+                subscribed: true
             });
 
             setStatus('success');
             setMessage('Thank you for subscribing!');
             setEmail('');
-
         } catch (error) {
-            console.error('Error adding subscriber:', error);
+            // Detaylı hata logu
+            console.error('Firebase Error:', error);
+            
             setStatus('error');
             setMessage('Unable to subscribe at this time. Please try again later.');
         }
