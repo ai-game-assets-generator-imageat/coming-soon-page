@@ -50,23 +50,46 @@ const CountDown: React.FC<Props> = ({ endDate }) => {
   const {title} = data;
 
   return (
-    <section className="flex justify-center items-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-extrabold m-2 text-sky-600 dark:text-sky-200 mb-4">{title}</h1>
-        <div className="text-center font-heading m-5 text-5xl sm:text-4xl lg:text-7xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-black">
-          <div className='flex flex-row justify-center gap-4'>
-            <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
-              {countdown.days} Days
-            </span>
-            <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
-              {countdown.hours} Hrs
-            </span>
-            <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
-              {countdown.minutes} Min
-            </span>
-            <span className={`bg-clip-text text-transparent bg-gradient-to-r ${secondColor}`}>
-              {countdown.seconds} Sec
-            </span>
+    <section className="flex justify-center items-center w-full px-4">
+      <div className="text-center w-full">
+        <h1 className="text-4xl font-extrabold m-2 text-sky-600 dark:text-sky-200 mb-8">{title}</h1>
+        <div className="text-center font-heading m-5 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
+          <div className='grid grid-cols-1 md:flex md:flex-row justify-center items-center gap-8 md:gap-12'>
+            <div className='flex flex-col md:flex-row items-center gap-2'>
+              <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-5xl md:text-6xl lg:text-7xl'>
+                {countdown.days}
+              </span>
+              <span className='text-xl md:text-2xl lg:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+                Days
+              </span>
+            </div>
+
+            <div className='flex flex-col md:flex-row items-center gap-2'>
+              <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-5xl md:text-6xl lg:text-7xl'>
+                {countdown.hours}
+              </span>
+              <span className='text-xl md:text-2xl lg:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+                Hrs
+              </span>
+            </div>
+
+            <div className='flex flex-col md:flex-row items-center gap-2'>
+              <span className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-5xl md:text-6xl lg:text-7xl'>
+                {countdown.minutes}
+              </span>
+              <span className='text-xl md:text-2xl lg:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+                Min
+              </span>
+            </div>
+
+            <div className='flex flex-col md:flex-row items-center gap-2'>
+              <span className={`bg-clip-text text-transparent bg-gradient-to-r ${secondColor} text-5xl md:text-6xl lg:text-7xl`}>
+                {countdown.seconds}
+              </span>
+              <span className={`text-xl md:text-2xl lg:text-3xl bg-clip-text text-transparent bg-gradient-to-r ${secondColor}`}>
+                Sec
+              </span>
+            </div>
           </div>
         </div>
       </div>
