@@ -50,7 +50,7 @@ const CountDown: React.FC<Props> = ({ endDate }) => {
   const {title} = data;
 
   return (
-    <section className="flex justify-center items-center w-full px-4">
+    <section className="flex flex-col justify-center items-center w-full px-4">
       <div className="text-center w-full">
         <h1 className="text-4xl font-extrabold m-2 text-sky-600 dark:text-sky-200 mb-8">{title}</h1>
         <div className="text-center font-heading m-5 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black">
@@ -91,6 +91,21 @@ const CountDown: React.FC<Props> = ({ endDate }) => {
               </span>
             </div>
           </div>
+        </div>
+
+        <div className="flex justify-center mt-8 mb-4">
+          <a 
+            href="https://www.producthunt.com/posts/ai-image-generation-for-game-developers?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;image&#0045;generation&#0045;for&#0045;game&#0045;developers" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transform hover:scale-105 transition-transform duration-200"
+          >
+            <img 
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=618418&theme=light" 
+              alt="AI Image Generation For Game Developers" 
+              className="w-[250px] h-[54px]"
+            />
+          </a>
         </div>
       </div>
     </section>
