@@ -92,21 +92,6 @@ const CountDown: React.FC<Props> = ({ endDate }) => {
             </div>
           </div>
         </div>
-
-        <div className="flex justify-center mt-8 mb-4">
-          <a 
-            href="https://www.producthunt.com/posts/ai-image-generation-for-game-developers?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ai&#0045;image&#0045;generation&#0045;for&#0045;game&#0045;developers" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transform hover:scale-105 transition-transform duration-200"
-          >
-            <img 
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=618418&theme=light" 
-              alt="AI Image Generation For Game Developers" 
-              className="w-[250px] h-[54px]"
-            />
-          </a>
-        </div>
       </div>
     </section>
   );
