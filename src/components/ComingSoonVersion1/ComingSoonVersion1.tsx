@@ -6,7 +6,7 @@ import SubscribeForm from '../SubscribeForm/SubscribeForm';
 import { ThemeSwitcher } from '../ThemeSwitcher';
 
 function ComingSoonVersion1() {
-    const specificEndDate = new Date('2025-02-15T23:59:59');
+    const specificEndDate = new Date('2025-03-15T23:59:59');
 
   return (
     <>
